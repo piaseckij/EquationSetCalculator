@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="SetOfEquationCalculator.Views.CalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SetOfEquationCalculator.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+
+            <TextBox Text="{Binding Equation1.A}" Margin="20 10 00 10" Width="75" Height="20" Grid.Row="0" Grid.Column="0"  />
+            <TextBlock Margin="5 10" Text="x +" Grid.Row="0" Grid.Column="1"/>
+            <TextBox Text="{Binding Equation1.B}" Margin="5 10 00 10" Width="75" Height="20" Grid.Row="0" Grid.Column="2"/>
+            <TextBlock Text="y ="  Margin="5 10" Grid.Column="3" Grid.Row="0"/>
+            <TextBox Text="{Binding Equation1.C}" Margin="5 10 00 10" Width="75" Height="20" Grid.Row="0" Grid.Column="4"/>
+
+            <TextBox Text="{Binding Equation2.A}" Margin="20 10 00 10" Width="75" Height="20" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Margin="5 10" Text="x +" Grid.Row="1" Grid.Column="1"/>
+            <TextBox Text="{Binding Equation2.B}" Margin="5 10 00 10" Width="75" Height="20" Grid.Row="1" Grid.Column="2"/>
+            <TextBlock Text="y ="  Margin="5 10" Grid.Column="3" Grid.Row="1"/>
+            <TextBox Text="{Binding Equation2.C}" Margin="5 10 00 10" Width="75" Height="20" Grid.Row="1" Grid.Column="4"/>
+            <Button Content="Count" Height="30" Grid.Row="3" Grid.Column="2" Command="{Binding ClickCommand}"></Button>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="X: " Margin="00 20"/>
+            <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding X}" Margin="00 20"/>
+            <TextBlock Grid.Row="4" Grid.Column="3" Text="Y: " Margin="00 20"/>
+            <TextBlock Grid.Row="4" Grid.Column="4" Text="{Binding Y}" Margin="00 20"/>
+
+        </Grid>
+
+
+
+    </Grid>
+</UserControl>
